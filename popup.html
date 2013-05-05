@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Vamos!</title>
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <script src="js/websocket_rails.js"></script>
+    <script src="js/event.js"></script>
+    <script src="js/http_connection.js"></script>
+    <script src="js/websocket_connection.js"></script>
+    <script src="js/channel.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+      body {
+        min-width: 250px;
+        overflow-x: hidden;
+        margin: 10px;
+      }
+    </style>
+    </head>
+  <body>
+    <img src="logo.png" style="padding-top: 10px;" />
+    <hr>
+    <div class="tabbable">
+      <ul class="nav nav-pills">
+        <li class="active"><a href="#today" data-toggle="pill"><div id="foo">Today</div></a></li>
+        <li><a href="#week" data-toggle="pill">Week</a></li>
+        <li><a href="#month" data-toggle="pill">Month</a></li>
+        <li><a href="#year" data-toggle="pill">Year</a></li>
+      </ul>
+      <div class="tab-content" style="float: left;">
+        <div class="tab-pane active" id="today">
+          <img src="sad_lady.png" id="today_img" />
+        </div>
+        <div class="tab-pane" id="week">
+          <img src="sad_lady.png" id="week_img" />
+        </div>
+        <div class="tab-pane" id="month">
+          <img src="sad_lady.png" id="month_img" />
+        </div>
+        <div class="tab-pane" id="year">
+          <img src="sad_lady.png" id="year_img" />
+        </div>
+      </div>
+      <div class="progress" style="display: inline-block; width: -webkit-calc(100% - 70px); margin: 28px 0 0 17px;">
+        <div class="bar bar-success" style="width: 50%;" id="good_bar"></div>
+        <div class="bar bar-danger" style="width: 50%;" id="bad_bar"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
