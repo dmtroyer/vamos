@@ -15,14 +15,14 @@ function backgroundSocket() {
     console.log(object.standing);
     var ratio = (object.standing + object.walking) / object.sitting;
     console.log("ratio: " + ratio)
-    
+
     if (ratio < GOOD_RATIO)
     {
-      chrome.browserAction.setIcon({path: "female_red_icon.png"});
+      chrome.browserAction.setIcon({path: "images/female_red_icon.png"});
     }
     else
     {
-      chrome.browserAction.setIcon({path: "female_green_icon.png"});
+      chrome.browserAction.setIcon({path: "images/female_green_icon.png"});
     }
   }
   var channel = dispatcher.subscribe('biometrics')

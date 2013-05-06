@@ -16,7 +16,8 @@ function openWebSocket() {
     var badBarPercentage = Math.round(parsedData.sitting / totalSeconds * 100);
     var ratio = (parsedData.standing + parsedData.walking) / parsedData.sitting;
 
-    var imgPath = ratio < 1 ? "sad_lady.png" : "happy_lady.png";
+    var imgPath = "images/";
+    imgPath += ratio < 1 ? "sad_lady.png" : "happy_lady.png";
     console.log("ratio: " + ratio)
     console.log(imgPath);
 
@@ -37,12 +38,12 @@ function toggle() {
   // myDebug('mydebugging');
   if (iconStatus == 0){
     // chrome.browserAction.setBadgeText({text: "up"}); // so it's set for the tab user is in
-    chrome.browserAction.setIcon({path: "female_red_icon.png"}); // so it's set for the tab user is in
+    chrome.browserAction.setIcon({path: "images/female_red_icon.png"}); // so it's set for the tab user is in
     iconStatus++;
   }
   else if (iconStatus == 1){
     // chrome.browserAction.setBadgeText({text: "down"}); // so it's set for the tab user is in
-    chrome.browserAction.setIcon({path: "female_green_icon.png"});
+    chrome.browserAction.setIcon({path: "images/female_green_icon.png"});
     iconStatus = 0;
   }
 }
