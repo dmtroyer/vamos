@@ -1,5 +1,6 @@
 function saveOptions() {
   localStorage["ip"] = $("#ip").val();
+  $("#success").show('slow');
 }
 
 function restoreOptions() {
@@ -8,7 +9,7 @@ function restoreOptions() {
   $("#ip").val(ip);
 }
 
-$(document).ready(function() { 
+$(document).ready(function() {
   restoreOptions();
   $("#save").click(saveOptions);
 });

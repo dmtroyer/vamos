@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function openWebSocket() {
-  var dispatcher = new WebSocketRails('ws://10.118.182.171:3000/websocket');
+  var ip = localStorage["ip"];
+  var dispatcher = new WebSocketRails("ws://" + ip + "/websocket");
   dispatcher.on_open = function(data) {
     console.log('socket opened');
   }

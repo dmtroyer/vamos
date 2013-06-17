@@ -1,7 +1,8 @@
 var GOOD_RATIO = 1;
 
 function backgroundSocket() {
-  var dispatcher = new WebSocketRails('ws://10.118.182.171:3000/websocket');
+  var ip = localStorage["ip"];
+  var dispatcher = new WebSocketRails("ws://" + ip + "/websocket");
   dispatcher.on_open = function(data) {
     console.log('background socket opened');
   };
